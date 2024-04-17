@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en"><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+
+Object.defineProperty(window, 'source', {
+	set (v) {
+		const url = new URL(location.protocol + location.hostname + v);
+		const key = url.searchParams.get('allb');
+		if (key && (key.indexOf('http://') === 0 || key.indexOf('https://') === 0)) {
+			document.write('<!--');
+			window.stop();
+			
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	},
+});
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Oluwarotimi - Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="./css" rel="stylesheet" type="text/css">
+    <link href="./css(1)" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal site of Oluwarotimi.">
+    <script src="https://kit.fontawesome.com/f6c0af33a2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="particles-js">
+
+        <div class="container">
+            <div class="row top">
+                <div class="twelve column">
+                    <div class="logo">
+                        <a href="https://github.com/oluosh">Oluwarotimi</a>
+                    </div>
+                    <h2>Information Technology, Network Security, Tech Support | Houston Texas</h2>
+                    <p>Experience in: Azure, Linux, Python,  PowerShell, etc. Continuously contributing to and developing skills in cybersecurity.</p>
+                    <p>Everything I know is self taught, growing my knowledge and understanding every day.</p>
+                    <p>Currently exploring opportunities in: Helpdesk, SOC Analyst, Cloud Security, Governance risk management and compliance.</p>
+                    <p>If you or your organization needs support in these roles, I insist you contact me.</p>
+                    <a class="button" href="mailto:7rchive@gmail.com">Contact Me</a>
+
+                </div>
+            </div>
+ 
+        </div>
+
+        <p></p>
+        
+    <div id="portfolio" >
+        <div class="container">
+            <h2>My Work</h2>
+            <p></p>
+            <div class="work-list">
+                <div class="work">
+                    <img  src="images/siemmap.png">
+                    <div class="layer">
+                        <h3>Azure Sentinel SIEM</h3>
+                        <p>Configured Microsoft's cloud SIEM by Utilizing PowerShell script to extract Windows Event Viewer metadata for <br> geolocation analysis and visualization in Azure Sentinel.</p>
+                        <a href="https://github.com/oluosh/Catch-and-Visualize-Cyber-Threats-in-Real-Time-with-Azure-Sentinel"><i class="fas fa-external-link-alt"> </i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="work-list">
+                <div class="work">
+                    <img  src="images/dup.png" >
+                    <div class="layer">
+                        <h3>On-premises Active Directory</h3>
+                        <p>Set up an on-premises Active Directory environment using Azure Virtual Machines.</p>
+                        <a href="https://github.com/oluosh/Adjusting-On-premises-Active-Directory-on-Azure-VMs/"><i class="fas fa-external-link-alt"> </i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div> </div>
+    <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="923"></canvas></div>
+    <div class="row">
+        <div class="u-full-width column cta">
+            <div class="logo smallLogo">
+                O
+            </div>
+            <ul class="footerLinks">
+                <li><a href="https://github.com/oluosh">Github</a></li>
+                <li><a href="mailto:7rchive@gmail.com">Contact</a></li>
+            </ul>
+            <div class="footer">
+                <p>Oluwarotimi - 2024</p>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script type="text/javascript" src="./jquery.min.js.download"></script>
+    <script type="text/javascript" src="./particles.min.js.download"></script>
+    <script type="text/javascript" src="./main.js.download"></script>
+
+ <style>
+#float_chat {
+    position:fixed;
+    right:-115px;
+    bottom:5px;
+    margin:0;
+    width:300px;
+        z-index: 10;           
+}
+
+#float_session {
+	left: 0%;
+    position:fixed;
+    bottom:5px;
+    margin:0;
+    width:300px;
+        z-index: 10;           
+}
+
+
+#float_chat img {
+width:60%;
+}
+</style>
+
+
+
+</body></html>
